@@ -2,15 +2,17 @@ package com.example.restaurant.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-
 import jakarta.persistence.Table;
+
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-@Table (name = "restaurant_tables")
+@Table(name = "restaurant_tables")
 @Entity
+@Builder
 public class TableRestaurant extends BaseEntity {
     @Column(name = "table_number")
     private int tableNumber;
@@ -20,5 +22,4 @@ public class TableRestaurant extends BaseEntity {
 
     @Column(name = "status")
     private String status;
-
 }

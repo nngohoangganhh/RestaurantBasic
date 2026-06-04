@@ -3,6 +3,7 @@ package com.example.restaurant.entity;
 import jakarta.persistence.*;
 import jakarta.persistence.Table;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,6 +13,7 @@ import java.util.UUID;
 @Getter
 @Table(name = "order_menu")
 @Entity
+@Builder
 public class OrderMenu extends BaseEntity {
 
     @Column(name = "order_id")

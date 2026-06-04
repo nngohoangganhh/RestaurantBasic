@@ -2,6 +2,7 @@ package com.example.restaurant.entity;
 
 import jakarta.persistence.*;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,6 +12,7 @@ import java.util.UUID;
 @Setter
 @Table(name = "users")
 @Entity
+@Builder
 public class User extends BaseEntity {
 
     @Column(name = "role_id")

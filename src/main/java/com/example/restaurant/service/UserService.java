@@ -5,7 +5,6 @@ import com.example.restaurant.entity.User;
 import java.util.List;
 
 public interface UserService {
-    
-    public List<User> getUsers();
 
+    public List<User> getUsers();
 }
