@@ -1,10 +1,24 @@
 package com.example.restaurant.entity;
 
 import jakarta.persistence.*;
+import jakarta.persistence.Table;
 
-@Table(name = "Order_menu")
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.UUID;
+
+@Setter
+@Getter
+@Table(name = "order_menu")
 @Entity
-public class OrderMenu extends Base {
+public class OrderMenu extends BaseEntity {
+
+    @Column(name = "order_id")
+    private UUID orderId;
+
+    @Column(name = "menu_id")
+    private UUID menuId;
 
     @Column(name = "quantity")
     private int quantity;
@@ -17,12 +31,4 @@ public class OrderMenu extends Base {
 
     @Column(name = "note")
     private String note;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "order_id")
-    private Order order;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "menu_item_id")
-    private Menu menuItem;
 }

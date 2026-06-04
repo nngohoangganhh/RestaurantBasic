@@ -1,6 +1,10 @@
 package com.example.restaurant.service;
 
-import org.springframework.stereotype.Service;
+import com.example.restaurant.entity.OrderMenu;
 
-@Service
-public class OrderMenuService {}
+import java.util.List;
+
+public interface OrderMenuService {
+
+    public List<OrderMenu> getOrderMenu();
+}

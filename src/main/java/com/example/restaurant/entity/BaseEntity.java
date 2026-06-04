@@ -11,9 +11,8 @@ import java.util.UUID;
 @Getter
 @Setter
 @MappedSuperclass
-public abstract class Base {
-    @Id
-    private UUID id;
+public abstract class BaseEntity {
+    @Id private UUID id;
 
     @Column(name = "update_at")
     private LocalDateTime updateAt;

@@ -7,11 +7,17 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.UUID;
+
 @Getter
 @Setter
 @Table(name = "menu")
 @Entity
-public class Menu extends Base {
+public class Menu extends BaseEntity {
+
+    @Column(name = "category_id")
+    private UUID categoryId;
+
     @Column(name = "name")
     private String name;
 
@@ -26,4 +32,7 @@ public class Menu extends Base {
 
     @Column(name = "available")
     private boolean available;
+
+    @Column(name = "is_deleted")
+    private boolean isDeleted;
 }

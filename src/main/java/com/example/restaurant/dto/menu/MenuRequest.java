@@ -12,3 +12,5 @@ public class MenuRequest {
     private String category;
     private boolean available;
 }
+
+

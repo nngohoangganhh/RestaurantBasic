@@ -1,17 +1,22 @@
 package com.example.restaurant.entity;
 
 import jakarta.persistence.*;
+import jakarta.persistence.Table;
 
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Getter
 @Setter
 @Table(name = "payment")
 @Entity
-public class Payment extends Base {
+public class Payment extends BaseEntity {
+    @Column(name = "order_id")
+    private UUID orderId;
+
     @Column(name = "amount")
     private double amount;
 
@@ -21,10 +26,12 @@ public class Payment extends Base {
     @Column(name = "status")
     private String status;
 
+    @Column(name = "transaction_code")
+    private String transactionCode;
+
+    @Column(name = "note")
+    private String note;
+
     @Column(name = "paid_at")
     private LocalDateTime paidAt;
-
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "order_id")
-    private Order order;
 }

@@ -1,13 +1,11 @@
 package com.example.restaurant.repository;
 
 import com.example.restaurant.entity.Menu;
-import com.example.restaurant.entity.User;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.UUID;
 
 @Repository
-public interface MenuRepository extends JpaRepository<User,UUID> {
-
-}
+public interface MenuRepository extends JpaRepository<Menu, UUID> {}

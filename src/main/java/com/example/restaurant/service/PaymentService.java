@@ -1,6 +1,9 @@
 package com.example.restaurant.service;
 
-import org.springframework.stereotype.Service;
+import com.example.restaurant.entity.Payment;
 
-@Service
-public class PaymentService {}
+import java.util.List;
+
+public interface PaymentService {
+   public List<Payment> getPayment();
+}

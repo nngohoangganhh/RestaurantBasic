@@ -1,4 +1,3 @@
 package com.example.restaurant.service.impl;
 
-public interface OrderService {
-}
+public class TableRestaurantServiceImpl {}

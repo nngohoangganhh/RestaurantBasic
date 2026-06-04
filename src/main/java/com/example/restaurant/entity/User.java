@@ -5,11 +5,16 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.UUID;
+
 @Getter
 @Setter
 @Table(name = "users")
 @Entity
-public class User extends Base {
+public class User extends BaseEntity {
+
+    @Column(name = "role_id")
+    private UUID roleId;
 
     @Column(name = "full_name")
     private String fullName;

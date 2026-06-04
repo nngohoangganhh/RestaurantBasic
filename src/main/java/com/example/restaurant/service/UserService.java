@@ -1,14 +1,11 @@
 package com.example.restaurant.service;
 
-import com.example.restaurant.repository.UserRepository;
+import com.example.restaurant.entity.User;
 
-import org.springframework.stereotype.Service;
+import java.util.List;
 
-@Service
-public class UserService {
-    private final UserRepository userRepository;
+public interface UserService {
+    
+    public List<User> getUsers();
 
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
 }

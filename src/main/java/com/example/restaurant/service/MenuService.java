@@ -1,4 +1,10 @@
 package com.example.restaurant.service;
 
-public class MenuService {
+import com.example.restaurant.entity.Menu;
+
+import java.util.List;
+
+public interface MenuService {
+
+    public List<Menu> getMenu();
 }
