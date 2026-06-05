@@ -2,9 +2,7 @@ package com.example.restaurant.entity;
 
 import jakarta.persistence.*;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -14,6 +12,8 @@ import java.util.UUID;
 @Table(name = "orders")
 @Entity
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Order extends BaseEntity {
     @Column(name = "table_id")
     private UUID tableId;

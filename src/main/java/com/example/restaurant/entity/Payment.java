@@ -3,9 +3,7 @@ package com.example.restaurant.entity;
 import jakarta.persistence.*;
 import jakarta.persistence.Table;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -15,6 +13,8 @@ import java.util.UUID;
 @Table(name = "payment")
 @Entity
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Payment extends BaseEntity {
     @Column(name = "order_id")
     private UUID orderId;

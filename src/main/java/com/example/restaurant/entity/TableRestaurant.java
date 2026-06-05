@@ -4,15 +4,15 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @Table(name = "restaurant_tables")
 @Entity
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class TableRestaurant extends BaseEntity {
     @Column(name = "table_number")
     private int tableNumber;

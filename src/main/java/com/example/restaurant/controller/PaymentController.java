@@ -18,7 +18,7 @@ public class PaymentController {
     private final PaymentService paymentService;
 
     @GetMapping("/payment")
-    public List<Payment> getPayment(){
+    public List<Payment> getPayment() {
         return paymentService.getPayment();
     }
 }

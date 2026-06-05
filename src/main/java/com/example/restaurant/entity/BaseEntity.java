@@ -12,7 +12,9 @@ import java.util.UUID;
 @Setter
 @MappedSuperclass
 public abstract class BaseEntity {
-    @Id private UUID id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
 
     @Column(name = "update_at")
     private LocalDateTime updateAt;

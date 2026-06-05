@@ -1,15 +1,16 @@
 package com.example.restaurant.dto.menu;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
+import java.util.UUID;
+
+@Builder
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class MenuResponse {
+    private UUID id;
     private String name;
     private String description;
     private double price;
